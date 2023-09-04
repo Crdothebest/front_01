@@ -1,0 +1,457 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?wexbcb');
+    src: url('fonts/icomoon.eot?wexbcb#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?wexbcb') format('truetype'),
+        url('fonts/icomoon.woff?wexbcb') format('woff'),
+        url('fonts/icomoon.svg?wexbcb#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+span {
+    font-family: 'icomoon';
+    color: pink;
+    font-size: 50px;
+}
+
+
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.Width {
+    /* 这不是在划分一个超级大盒子，而是在设置一个公共属性 */
+    /* 页面中每个大盒子都调用该CSS类，使得盒子居中摆放，且宽度均1200px */
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.head_box {
+    height: 42px;
+    margin: 30px auto;
+    /* ！这里注意重叠性，此处的margin必须要再给一个auto，否则不居中 */
+}
+
+.head_box .logo {
+    float: left;
+    width: 198px;
+    height: 42px;
+    background-image: url(../pics_file/project_1_学成在线/logo.png);
+}
+
+/* 不用给宽度，因为我们希望可以横向自动变长，利用浮动特性 */
+.head_box .intro {
+    float: left;
+    margin-left: 60px;
+    height: 42px;
+}
+
+/* 首先希望块级元素li浮动，横向排列 */
+/* li没有给高度，则默认为盒子高度；没有给宽度，则默认为文字宽度 */
+.head_box .intro li {
+    float: left;
+    margin-right: 15px;
+}
+
+.head_box .intro li:hover {
+    border-bottom: rgb(19, 171, 231) solid 3px;
+}
+
+.head_box .intro li a {
+    line-height: 42px;
+    padding: 0 10px;
+    color: black;
+    font-size: 18px;
+}
+
+.search {
+    float: left;
+    overflow: hidden;
+    margin-left: 60px;
+    height: 42px;
+    width: 412px;
+    border: none;
+}
+
+.search input {
+    float: left;
+    margin: 1px 0;
+    height: 36px;
+    width: 340px;
+    border: rgb(19, 171, 231) solid 2px;
+    border-right: none;
+    padding-left: 20px;
+    color: gray;
+}
+
+.search input :hover {
+    border-color: rgb(19, 171, 231);
+}
+
+.search button {
+    float: left;
+    height: 40px;
+    width: 42px;
+    border: none;
+    background-image: url(../pics_file/project_1_学成在线/btn.png);
+}
+
+.head_box .user {
+    float: left;
+    height: 42px;
+    margin-left: 20px;
+}
+
+.head_box .user #logo2 {
+    float: left;
+    margin: 6px 0;
+    height: 30px;
+    width: 30px;
+    background-image: url(../pics_file/project_1_学成在线/user.png);
+    background-repeat: no-repeat;
+}
+
+.head_box .user input {
+    height: 30px;
+    width: 60px;
+    margin: 6px 0;
+    font-size: 17px;
+    color: gray;
+    border: none;
+    padding-left: 10px;
+}
+
+.banner {
+    position: sticky;
+    top: 0;
+    /* z-index: 2; */
+    height: 421px;
+    background-color: #1c036c;
+}
+
+.banner_heart {
+    margin: 0 auto;
+    height: 421px;
+    background-image: url(../pics_file/project_1_学成在线/banner2.png);
+}
+
+.banner .banner_left {
+    float: left;
+    height: 421px;
+    width: 190px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.banner .banner_left a {
+    display: block;
+    height: 45px;
+    padding-left: 20px;
+    line-height: 45px;
+    color: white;
+    /* border: red solid; */
+}
+
+.banner .banner_left a:hover {
+    color: rgb(19, 171, 231);
+}
+
+.banner .banner_left a span {
+    float: right;
+    padding-right: 10px;
+}
+
+.banner .banner_right {
+    float: right;
+    margin: 60.5px 0;
+    height: 300px;
+    width: 230px;
+}
+
+.banner .banner_right h2 {
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    color: white;
+    background-color: rgb(19, 231, 199);
+}
+
+.banner_right ul {
+    height: 240px;
+    width: 230px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.banner_right ul li {
+    height: 60px;
+    /* border: red solid; */
+    border-bottom: gray solid 3px;
+}
+
+.banner_right ul li h4 {
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 12px;
+    color: black;
+}
+
+.banner_right ul li h5 {
+    display: inline-block;
+    margin-left: 10px;
+    color: black;
+}
+
+.banner_right ul li p {
+    margin-left: 20px;
+    font-size: 14px;
+    color: gray;
+}
+
+.banner_right #content #btn {
+    display: block;
+    margin: 10px 30px;
+    height: 30px;
+    width: 166px;
+    text-align: center;
+    line-height: 30px;
+    color: rgb(20, 140, 237);
+    background-color: white;
+    border: rgb(19, 171, 231) solid 2px;
+}
+
+.recommend {
+    margin: 10px auto;
+    height: 60px;
+    background-color: rgba(19, 171, 231, 0.3);
+}
+
+.recommend h3 {
+    float: left;
+    padding: 0 35px;
+    color: blueviolet;
+    line-height: 60px;
+}
+
+.recommend ul li a {
+    float: left;
+    padding: 0 35px;
+    line-height: 60px;
+    color: black;
+}
+
+.recommend ul li a:hover {
+    color: pink;
+}
+
+.recommend span a {
+    float: right;
+    line-height: 60px;
+    margin-right: 35px;
+    color: blueviolet;
+}
+
+.recommend {
+    box-shadow: 5px 5px 10px gray;
+}
+
+.detail_recommend {
+    margin: 40px auto;
+}
+
+.detail_recommend .head {
+    height: 50px;
+    line-height: 50px;
+}
+
+.detail_recommend .head h3 {
+    float: left;
+    color: gray;
+}
+
+.detail_recommend .head span a {
+    float: right;
+    margin: 0 35px;
+    line-height: 50px;
+    color: blueviolet;
+    font-size: 14px;
+}
+
+.detail_recommend .body ul li {
+    float: left;
+    position: relative;
+    margin: 10px 5px;
+    height: 270px;
+    width: 225px;
+    /* border: red solid; */
+    box-shadow: 2px 3px 6px gray;
+}
+
+
+.detail_recommend li img {
+    width: 100%;
+}
+
+.detail_recommend li h4 {
+    margin: 20px 18px;
+}
+
+.detail_recommend li span {
+    float: left;
+    font-size: 14px;
+    color: gray;
+    font-size: 13px;
+}
+
+#level {
+    margin-left: 18px;
+    color: orange;
+    font-weight: bold;
+}
+
+.detail_recommend li .logo {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    height: 40px;
+    width: 50px;
+    background-image: url(../pics_file/project_1_学成在线/btn.png);
+}
+
+/* 因为 detail_recommend盒子没有设定高度，所以一定要加 伪元素选择器 */
+.detail_recommend:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+
+.bottom {
+    margin-top: 20px;
+    height: 300px;
+    /* background-color: pink; */
+    overflow: hidden;
+}
+
+.bottom_heart {
+    height: 300px;
+    margin: 0 auto;
+    background-color: rgba(237, 237, 84, 0.3);
+}
+
+.bottom_heart .left {
+    float: left;
+    margin: 10px 15px;
+    height: 200px;
+    width: 400px;
+    /* background-color: rgb(30, 187, 231); */
+}
+
+.bottom_heart .left img {
+    /* background-image: url(../pics_file/project_1_学成在线/logo.png); */
+    margin: 10px 20px;
+}
+
+.bottom_heart .left p {
+    margin: 0 20px;
+    color: gray;
+    font-size: 14px;
+}
+
+.bottom_heart .left button {
+    margin: 10px 20px;
+    height: 35px;
+    width: 130px;
+    border: pink solid 2px;
+    background-color: white;
+}
+
+.bottom_heart .left a {
+    text-align: center;
+    line-height: 35px;
+    color: green;
+}
+
+.bottom_heart .right table {
+    float: right;
+    margin: 15px 0;
+    margin-right: 25px;
+    /* border: red solid; */
+    color: gray;
+}
+
+.bottom_heart .right thead td {
+    padding: 0 60px;
+    font-size: 18px;
+    /* border: green solid; */
+}
+
+.bottom_heart .right tbody td {
+    padding: 10px 60px;
+    font-size: 14px;
+    /* border: red solid; */
+}
+
+.left_lan {
+    position: fixed;
+    /* z-index: 3; */
+    top: 300px;
+    left: 0;
+    /* display: block; */
+    height: 300px;
+    width: 100px;
+    background-image: url(../pics_file/project_1_学成在线/left.jpg);
+}
+
+.left_lan:hover {
+    display: none;
+}
+
+.test_logo {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: 600px;
+    /* top: 300px; */
+    height: 30px;
+    width: 30px;
+    background-image: url(../pics_file/project_1_学成在线/user.png);
+}
+
+
+.pause_box {
+    /* display: none; */
+    visibility: hidden;
+    position: absolute;
+    height: 270px;
+    width: 225px;
+    background-color: rgba(39, 35, 35, 0.2);
+}
+
+.pause_logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    height: 30px;
+    width: 30px;
+    background-image: url(../pics_file/project_1_学成在线/user.png);
+}
+
+.body li:hover .pause_box {
+    /* display: block; */
+    visibility: visible;
+}
